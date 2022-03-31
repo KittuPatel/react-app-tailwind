@@ -1,5 +1,5 @@
 import React from "react"
-import { Switch, Route, Redirect } from "react-router-dom"
+import { Switch, Route, Redirect, useLocation } from "react-router-dom"
 
 // components
 
@@ -18,13 +18,16 @@ import Discount from "views/resident/Discount.js"
 import Chats from "views/resident/Chats.js"
 
 export default function Resident() {
+  const location = useLocation()
+  const pathName = location.pathname
+
   return (
     <>
       <Sidebar />
-      <div className='relative md:ml-64 bg-blueGray-100'>
-        <AdminNavbar />
+      <div className='relative md:ml-64'>
+        {pathName.includes("/resident/dashboard") && <AdminNavbar />}
         {/* Header */}
-        <HeaderStats />
+        {pathName.includes("/resident/dashboard") && <HeaderStats />}
         <div className='px-4 md:px-10 mx-auto w-full -m-24'>
           <Switch>
             {/* <Route path='/resident/dashboard' exact component={Dashboard} />
@@ -37,7 +40,6 @@ export default function Resident() {
             <Route path='/resident/chats' exact component={Chats} />
             <Redirect from='/resident' to='/resident/school' />
           </Switch>
-          <FooterAdmin />
         </div>
       </div>
     </>
