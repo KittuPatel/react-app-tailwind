@@ -7,7 +7,7 @@ import AdminNavbar from "components/Navbars/AdminNavbar.js"
 import Sidebar from "components/Sidebar/Sidebar.js"
 import HeaderStats from "components/Headers/HeaderStats.js"
 import FooterAdmin from "components/Footers/FooterAdmin.js"
-
+import { Link, useLocation } from "react-router-dom"
 // views
 import Dashboard from "views/inspector/Dashboard"
 import Events from "views/inspector/Events.js"
@@ -19,13 +19,16 @@ import Residents from "views/inspector/Residents"
 import Moveouts from "views/inspector/Moveouts"
 
 export default function Inspector() {
+  const location = useLocation()
+  const pathName = location.pathname
+  console.log(pathName)
   return (
     <>
       <Sidebar />
-      <div className='relative md:ml-64 bg-blueGray-100'>
-        <AdminNavbar />
+      <div className='relative md:ml-64'>
+        {pathName.includes("/inspector/dashboard") && <AdminNavbar />}
         {/* Header */}
-        <HeaderStats />
+        {pathName.includes("/inspector/dashboard") && <HeaderStats />}
         <div className='px-4 md:px-10 mx-auto w-full -m-24'>
           <Switch>
             <Route path='/inspector/dashboard' exact component={Dashboard} />
@@ -38,7 +41,6 @@ export default function Inspector() {
             <Route path='/inspector/chats' exact component={Chats} />
             <Redirect from='/inspector' to='/inspector/school' />
           </Switch>
-          <FooterAdmin />
         </div>
       </div>
     </>
