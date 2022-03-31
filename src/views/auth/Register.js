@@ -57,7 +57,58 @@ export default function Register() {
                       placeholder='Password'
                     />
                   </div>
-
+                  <div className='relative w-full mb-3'>
+                    <label
+                      className='block uppercase text-blueGray-600 text-xs font-bold mb-2'
+                      htmlFor='grid-password'
+                    >
+                      Address
+                    </label>
+                    <input
+                      type='text'
+                      className='border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150'
+                      placeholder='Address'
+                    />
+                  </div>
+                  <div className='relative w-full mb-3'>
+                    <label
+                      className='block uppercase text-blueGray-600 text-xs font-bold mb-2'
+                      htmlFor='grid-password'
+                    >
+                      Phone 
+                    </label>
+                    <input
+                      type='number'
+                      className='border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150'
+                      placeholder='Phone No.'
+                    />
+                  </div>
+                  <div className='relative w-full mb-3'>
+                    <label
+                      className='block uppercase text-blueGray-600 text-xs font-bold mb-2'
+                      htmlFor='grid-password'
+                    >
+                      Date of Birth 
+                    </label>
+                    <input
+                      type='date'
+                      className='border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150'
+                      
+                    />
+                  </div>
+                  <div className='relative w-full mb-3'>
+                    <label
+                      className='block uppercase text-blueGray-600 text-xs font-bold mb-2'
+                      htmlFor='grid-password'
+                    >
+                      Move Out
+                    </label>
+                    <input
+                      type='date'
+                      className='border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150'
+                      
+                    />
+                  </div>
                   <div>
                     <label className='inline-flex items-center cursor-pointer'>
                       <input

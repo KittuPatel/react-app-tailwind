@@ -34,9 +34,6 @@ export default function Navbar(props) {
             id='example-navbar-warning'
           >
             <ul className='flex flex-col lg:flex-row list-none lg:ml-auto'>
-              <li className='flex items-center'>
-                <IndexDropdown />
-              </li>
 
               <li className='flex items-center'>
                 <Link
@@ -46,7 +43,22 @@ export default function Navbar(props) {
                   Home
                 </Link>
               </li>
-
+              <li className='flex items-center'>
+                <Link
+                  to='/'
+                  className='text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
+                >
+                  About Us
+                </Link>
+              </li>
+              <li className='flex items-center'>
+                <Link
+                  to='/'
+                  className='text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
+                >
+                  Contact Us
+                </Link>
+              </li>
               <li className='flex items-center'>
                 <Link
                   to='/auth/register'

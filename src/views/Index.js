@@ -14,10 +14,10 @@ export default function Index() {
           <div className='w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4'>
             <div className='pt-32 sm:pt-0'>
               <h2 className='font-semibold text-4xl text-blueGray-600'>
-                Good vibes happen on the tides.
+                Welcome to the Paradise.
               </h2>
               <p className='mt-4 text-lg leading-relaxed text-blueGray-500'>
-                We help you live in beautiful island.
+              This is a government of Margarita island initiative platform to b used for residents digital registration for the population count, statistical purposes as well as ease of offering government related services
               </p>
               <div className='mt-12'>
                 <Link
@@ -25,7 +25,7 @@ export default function Index() {
                   target='_blank'
                   className='get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-lightBlue-500 active:bg-lightBlue-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150'
                 >
-                  Get started
+                  Signup
                 </Link>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function Index() {
                         <i className='fas fa-sitemap'></i>
                       </div>
                       <h6 className='text-xl mb-1 font-semibold'>
-                        CSS Components
+                        Flights
                       </h6>
                       <p className='mb-4 text-blueGray-500'>
                         Notus React comes with a huge number of Fully Coded CSS
@@ -113,7 +113,7 @@ export default function Index() {
                         <i className='fas fa-drafting-compass'></i>
                       </div>
                       <h6 className='text-xl mb-1 font-semibold'>
-                        JavaScript Components
+                        Business
                       </h6>
                       <p className='mb-4 text-blueGray-500'>
                         We also feature many dynamic components for React,
@@ -128,7 +128,7 @@ export default function Index() {
                       <div className='text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white'>
                         <i className='fas fa-newspaper'></i>
                       </div>
-                      <h6 className='text-xl mb-1 font-semibold'>Pages</h6>
+                      <h6 className='text-xl mb-1 font-semibold'>Schools</h6>
                       <p className='mb-4 text-blueGray-500'>
                         This extension also comes with 3 sample pages. They are
                         fully coded so you can start working instantly.
@@ -141,7 +141,7 @@ export default function Index() {
                         <i className='fas fa-file-alt'></i>
                       </div>
                       <h6 className='text-xl mb-1 font-semibold'>
-                        Documentation
+                        Events
                       </h6>
                       <p className='mb-4 text-blueGray-500'>
                         Built by developers for developers. You will love how
