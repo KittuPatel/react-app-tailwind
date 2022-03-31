@@ -105,11 +105,6 @@ export default function Sidebar() {
 
             {/* Divider */}
             <hr className='my-4 md:min-w-full' />
-            {/* Heading */}
-            <h6 className='md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline'>
-              Admin Layout Pages
-            </h6>
-            {/* Navigation */}
 
             {pathName.includes("admin/") && (
               <ul className='md:flex-col md:min-w-full flex flex-col list-none'>
@@ -147,7 +142,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-users mr-2 text-sm " +
                         (window.location.href.indexOf("/admin/residents") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -191,7 +186,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-school mr-2 text-sm " +
                         (window.location.href.indexOf("/admin/schools") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -213,7 +208,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-building mr-2 text-sm " +
                         (window.location.href.indexOf("/admin/business") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -235,7 +230,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-user mr-2 text-sm " +
                         (window.location.href.indexOf("/admin/inspectors") !==
                         -1
                           ? "opacity-75"
@@ -258,7 +253,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-comment mr-2 text-sm " +
                         (window.location.href.indexOf("/admin/chats") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -284,7 +279,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-school mr-2 text-sm " +
                         (window.location.href.indexOf("/resident/school") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -306,7 +301,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-calendar mr-2 text-sm " +
                         (window.location.href.indexOf("/resident/events") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -328,7 +323,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-calendar-check mr-2 text-sm " +
                         (window.location.href.indexOf("/resident/tickets") !==
                         -1
                           ? "opacity-75"
@@ -351,7 +346,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-building mr-2 text-sm " +
                         (window.location.href.indexOf("/resident/business") !==
                         -1
                           ? "opacity-75"
@@ -374,7 +369,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-dollar-sign mr-2 text-sm " +
                         (window.location.href.indexOf("/resident/discount") !==
                         -1
                           ? "opacity-75"
@@ -397,7 +392,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-comment mr-2 text-sm " +
                         (window.location.href.indexOf("/resident/chats") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -448,7 +443,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-users mr-2 text-sm " +
                         (window.location.href.indexOf(
                           "/inspector/residents"
                         ) !== -1
@@ -472,7 +467,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-school mr-2 text-sm " +
                         (window.location.href.indexOf("/inspector/schools") !==
                         -1
                           ? "opacity-75"
@@ -496,7 +491,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-question-circle mr-2 text-sm " +
                         (window.location.href.indexOf("/inspector/moveouts") !==
                         -1
                           ? "opacity-75"
@@ -519,7 +514,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-calendar mr-2 text-sm " +
                         (window.location.href.indexOf("/inspector/events") !==
                         -1
                           ? "opacity-75"
@@ -543,7 +538,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-calendar-check mr-2 text-sm " +
                         (window.location.href.indexOf("/inspector/discount") !==
                         -1
                           ? "opacity-75"
@@ -566,7 +561,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-building mr-2 text-sm " +
                         (window.location.href.indexOf("/inspector/business") !==
                         -1
                           ? "opacity-75"
@@ -589,7 +584,7 @@ export default function Sidebar() {
                   >
                     <i
                       className={
-                        "fas fa-map-marked mr-2 text-sm " +
+                        "fas fa-comment mr-2 text-sm " +
                         (window.location.href.indexOf("/inspector/chats") !== -1
                           ? "opacity-75"
                           : "text-blueGray-300")
@@ -610,7 +605,7 @@ export default function Sidebar() {
                   className='text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block'
                   to='/'
                 >
-                  <i className='fas fa-fingerprint text-blueGray-400 mr-2 text-sm'></i>{" "}
+                  <i className='fas fa-share-square text-blueGray-400 mr-2 text-sm'></i>{" "}
                   Logout
                 </Link>
               </li>
