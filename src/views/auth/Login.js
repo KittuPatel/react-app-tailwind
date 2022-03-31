@@ -5,16 +5,20 @@ export default function Login() {
   const history = useHistory()
 
   const handleLogin = () => {
-    // const email = document.getElementById("email").value
-    // const password = document.getElementById("password").value
+    const email = document.getElementById("email").value
+    const password = document.getElementById("password").value
     const usertype = document.getElementById("usertype").value
 
-    if (usertype === "admin") {
-      history.push("/admin/dashboard")
-    } else if (usertype === "resident") {
-      history.push("/resident")
+    if (email === "" || password === "" || usertype === "") {
+      alert("Please fill in all fields")
     } else {
-      history.push("/inspector")
+      if (usertype === "admin") {
+        history.push("/admin/dashboard")
+      } else if (usertype === "resident") {
+        history.push("/resident")
+      } else {
+        history.push("/inspector")
+      }
     }
   }
 
@@ -68,7 +72,7 @@ export default function Login() {
                       className='block uppercase text-blueGray-600 text-xs font-bold mb-2'
                       htmlFor='usertype'
                     >
-                      Password
+                      User Type
                     </label>
                     <select
                       name='usertype'
