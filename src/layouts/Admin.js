@@ -29,14 +29,14 @@ export default function Admin() {
     <>
       <Sidebar />
       <div className='relative md:ml-64'>
-        <AdminNavbar />
+        {pathName.includes("/admin/dashboard") && <AdminNavbar />}
         {/* Header */}
-        {/* {pathName === "/admin/dashboard" && <HeaderStats />} */}
-        <HeaderStats />
+        {pathName.includes("/admin/dashboard") && <HeaderStats />}
+        {/* <HeaderStats /> */}
         <div className='px-4 md:px-10 mx-auto w-full -m-24'>
           <Switch>
             <Route path='/admin/dashboard' exact component={Dashboard} />
-            <Route path='/admin/settings' exact component={Settings} />
+            {/* <Route path='/admin/settings' exact component={Settings} /> */}
             <Route path='/admin/residents' exact component={Residents} />
             <Route path='/admin/counties' exact component={Counties} />
             <Route path='/admin/schools' exact component={Schools} />
@@ -45,7 +45,7 @@ export default function Admin() {
             <Route path='/admin/chats' exact component={Chats} />
             <Redirect from='/admin' to='/admin/dashboard' />
           </Switch>
-          <FooterAdmin />
+          {/* <FooterAdmin /> */}
         </div>
       </div>
     </>

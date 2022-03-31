@@ -70,7 +70,11 @@ export default function Login() {
                     >
                       Password
                     </label>
-                    <select name='usertype' id='usertype'>
+                    <select
+                      name='usertype'
+                      id='usertype'
+                      className='border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150'
+                    >
                       <option value='usertype' selected disabled>
                         Select User Type
                       </option>
