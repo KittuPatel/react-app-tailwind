@@ -45,7 +45,7 @@ export default function Navbar(props) {
               </li>
               <li className='flex items-center'>
                 <Link
-                  to='/'
+                  to='/about-us'
                   className='text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
                 >
                   About Us
@@ -53,7 +53,7 @@ export default function Navbar(props) {
               </li>
               <li className='flex items-center'>
                 <Link
-                  to='/'
+                  to='/contact-us'
                   className='text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
                 >
                   Contact Us
