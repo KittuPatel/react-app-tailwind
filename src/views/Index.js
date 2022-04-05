@@ -98,13 +98,6 @@ export default function Index() {
                       <div className='text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white'>
                         <i className='fas fa-sitemap'></i>
                       </div>
-                      <h6 className='text-xl mb-1 font-semibold'>
-                        Flights
-                      </h6>
-                      <p className='mb-4 text-blueGray-500'>
-                        Notus React comes with a huge number of Fully Coded CSS
-                        components.
-                      </p>
                     </div>
                   </div>
                   <div className='relative flex flex-col min-w-0'>
@@ -143,10 +136,6 @@ export default function Index() {
                       <h6 className='text-xl mb-1 font-semibold'>
                         Events
                       </h6>
-                      <p className='mb-4 text-blueGray-500'>
-                        Built by developers for developers. You will love how
-                        easy is to to work with Notus React.
-                      </p>
                     </div>
                   </div>
                 </div>

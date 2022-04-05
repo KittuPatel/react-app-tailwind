@@ -59,16 +59,6 @@ function MapExample() {
 
     map = new google.maps.Map(map, mapOptions);
 
-    const marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      animation: google.maps.Animation.DROP,
-      title: "Notus React!",
-    });
-
-    const contentString =
-      '<div class="info-window-content"><h2>Notus React</h2>' +
-      "<p>A free Admin for Tailwind CSS, React, and React Hooks.</p></div>";
 
     const infowindow = new google.maps.InfoWindow({
       content: contentString,
