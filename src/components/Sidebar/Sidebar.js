@@ -36,24 +36,25 @@ export default function Sidebar() {
           <div className='flex flex-col md:flex-row items-center'>
             {pathName.includes("/admin/") && (
               <div className='flex flex-row items-center'>
-                <h2>Mike {"  - "}</h2>
+                <h2>{JSON.parse(localStorage.getItem('userInfo'))['name'] + "  - "}</h2>
                 <h2>Admin</h2>
               </div>
             )}
 
             {pathName.includes("/resident/") && (
               <div className='flex flex-row items-center'>
-                <h2>John {"  - "}</h2>
+                <h2>{ JSON.parse(localStorage.getItem('userInfo'))['name'] + "  - "}</h2>
                 <h2> Resident</h2>
               </div>
             )}
 
             {pathName.includes("/inspector/") && (
               <div className='flex flex-row items-center'>
-                <h2>Smith {"  - "}</h2>
+                <h2>{JSON.parse(localStorage.getItem('userInfo'))['name'] + "  - "}</h2>
                 <h2>Inspector</h2>
               </div>
             )}
+            
           </div>
           <ul className='md:hidden items-center flex flex-wrap list-none'>
             <li className='inline-block relative'>
@@ -92,18 +93,6 @@ export default function Sidebar() {
                 </div>
               </div>
             </div>
-            {/* Form */}
-            <form className='mt-6 mb-4 md:hidden'>
-              <div className='mb-3 pt-0'>
-                <input
-                  type='text'
-                  placeholder='Search'
-                  className='border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal'
-                />
-              </div>
-            </form>
-
-            {/* Divider */}
             <hr className='my-4 md:min-w-full' />
 
             {pathName.includes("admin/") && (
@@ -127,7 +116,17 @@ export default function Sidebar() {
                       }
                     ></i>{" "}
                     Dashboard
-                  </Link>
+                  </Link></li>
+                  <li className='items-center'>
+                  <Link
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (window.location.href.indexOf("/admin/profile") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                    to='/admin/profile'
+                  >Profile</Link>
                 </li>
 
                 <li className='items-center'>
@@ -267,6 +266,24 @@ export default function Sidebar() {
 
             {pathName.includes("resident/") && (
               <ul className='md:flex-col md:min-w-full flex flex-col list-none'>
+                <li className='items-center'>
+                  <Link
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (window.location.href.indexOf("/resident/profile") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                    to='/resident/profile'
+                  ><i
+                  className={
+                    "fas fa-profile mr-2 text-sm " +
+                    (window.location.href.indexOf("/resident/profile") !== -1
+                      ? "opacity-75"
+                      : "text-blueGray-300")
+                  }
+                ></i>{" "}Profile</Link>
+                </li>
                 <li className='items-center'>
                   <Link
                     className={
@@ -429,6 +446,24 @@ export default function Sidebar() {
                     ></i>{" "}
                     Dashboard
                   </Link>
+                </li>
+                <li className='items-center'>
+                  <Link
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (window.location.href.indexOf("/inspector/profile") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                    to='/inspector/profile'
+                  ><i
+                  className={
+                    "fas fa-profile mr-2 text-sm " +
+                    (window.location.href.indexOf("/inspector/profile") !== -1
+                      ? "opacity-75"
+                      : "text-blueGray-300")
+                  }
+                ></i>{" "}Profile</Link>
                 </li>
                 <li className='items-center'>
                   <Link

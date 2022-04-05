@@ -32,7 +32,7 @@ export default function FooterSmall(props) {
                     to='/'
                     className='text-white hover:text-blueGray-300 text-sm font-semibold block py-1 px-3'
                   >
-                    Sitemar
+                    Siremar
                   </Link>
                 </li>
               </ul>

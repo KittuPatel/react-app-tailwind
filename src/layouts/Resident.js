@@ -10,6 +10,7 @@ import FooterAdmin from "components/Footers/FooterAdmin.js"
 
 // views
 
+import Profile from "views/resident/residentProfile.js"
 import Tickets from "views/resident/Tickets.js"
 import Events from "views/resident/Events.js"
 import School from "views/resident/School.js"
@@ -32,6 +33,7 @@ export default function Resident() {
           <Switch>
             {/* <Route path='/resident/dashboard' exact component={Dashboard} />
             <Route path='/resident/settings' exact component={Settings} /> */}
+            <Route path='/resident/profile' exact component={Profile} />
             <Route path='/resident/school' exact component={School} />
             <Route path='/resident/events' exact component={Events} />
             <Route path='/resident/tickets' exact component={Tickets} />

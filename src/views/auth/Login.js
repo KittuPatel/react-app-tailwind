@@ -7,19 +7,26 @@ export default function Login() {
   const handleLogin = () => {
     const email = document.getElementById("email").value
     const password = document.getElementById("password").value
-    const usertype = document.getElementById("usertype").value
-
-    if (email === "" || password === "" || usertype === "") {
-      alert("Please fill in all fields")
-    } else {
-      if (usertype === "admin") {
-        history.push("/admin/dashboard")
-      } else if (usertype === "resident") {
-        history.push("/resident")
-      } else {
-        history.push("/inspector")
+    const user_type = document.getElementById("usertype").value
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password, user_type })
+  };
+  fetch('http://localhost/rahul/siremar/public/api/login', requestOptions)
+    .then(response => response.json())
+    .then(data => {
+      localStorage.setItem('userInfo', JSON.stringify(data.user));
+      // this.setState({ userInfo: data.user });
+      // console.log(data.user.user_type);
+      if(data.user.user_type === 'admin'){
+        history.push('/admin/dashboard')
+      }else if(data.user.user_type === 'RESIDENT'){
+        history.push('/resident');
+      }else{
+        history.push('/inspector');
       }
-    }
+        });
   }
 
   return (
@@ -79,7 +86,7 @@ export default function Login() {
                       id='usertype'
                       className='border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150'
                     >
-                      <option value='usertype' selected disabled>
+                      <option value='usertype' defaultValue disabled>
                         Select User Type
                       </option>
                       <option value='admin'>Admin</option>

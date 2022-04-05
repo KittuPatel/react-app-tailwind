@@ -17,6 +17,7 @@ import Discount from "views/inspector/Discount.js"
 import Chats from "views/inspector/Chats.js"
 import Residents from "views/inspector/Residents"
 import Moveouts from "views/inspector/Moveouts"
+import Profile from "views/inspector/Profile"
 
 export default function Inspector() {
   const location = useLocation()
@@ -31,6 +32,7 @@ export default function Inspector() {
         {pathName.includes("/inspector/dashboard") && <HeaderStats />}
         <div className='px-4 md:px-10 mx-auto w-full -m-24'>
           <Switch>
+            <Route path='/inspector/profile' exact component={Profile} />
             <Route path='/inspector/dashboard' exact component={Dashboard} />
             <Route path='/inspector/residents' exact component={Residents} />
             <Route path='/inspector/schools' exact component={Schools} />
